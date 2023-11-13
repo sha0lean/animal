@@ -1,0 +1,49 @@
+
+pnpx create-vite@latest animal --template react
+
+	Packages: +1
+	Progress: resolved 1, reused 1, downloaded 0, added 1, done
+
+	Scaffolding project in /Users/shao/workspace/animal...
+
+	Done. Now run:
+
+		cd animal
+		pnpm install
+		pnpm run dev
+
+------------------------------------------------------------------------------------------------------------------
+pnpm install
+
+	Packages: +268
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	Progress: resolved 289, reused 0, downloaded 268, added 268, done
+	node_modules/.pnpm/esbuild@0.18.20/node_modules/esbuild: Running postinstall script, done in 395ms
+
+	dependencies:
+	+ react 18.2.0
+	+ react-dom 18.2.0
+
+	devDependencies:
+	+ @types/react 18.2.37
+	+ @types/react-dom 18.2.15
+	+ @vitejs/plugin-react 4.1.1
+	+ eslint 8.53.0
+	+ eslint-plugin-react 7.33.2
+	+ eslint-plugin-react-hooks 4.6.0
+	+ eslint-plugin-react-refresh 0.4.4
+	+ vite 4.5.0
+
+------------------------------------------------------------------------------------------------------------------
+pnpm install -D tailwindcss postcss autoprefixer
+
+	Packages: +49
+	+++++++++++++++++++++++++++++++++++++++++++++++++
+	Progress: resolved 338, reused 268, downloaded 49, added 49, done
+
+	devDependencies:
+	+ autoprefixer 10.4.16
+	+ postcss 8.4.31
+	+ tailwindcss 3.3.5
+
+------------------------------------------------------------------------------------------------------------------
