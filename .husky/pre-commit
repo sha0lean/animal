@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+# Inclure le script husky.sh dans le chemin courant
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Exécuter la commande suivante pendant un `git commit`
+# (lors de l'exécution de la validation pré-commit)
+pnpm run lint:fix

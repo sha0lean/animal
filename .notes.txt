@@ -43,7 +43,43 @@ pnpm install -D tailwindcss postcss autoprefixer
 
 	devDependencies:
 	+ autoprefixer 10.4.16
-	+ postcss 8.4.31
+	+ postcss 8.4.31-
 	+ tailwindcss 3.3.5
 
-------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+pnpm dlx husky-init && pnpm install
+	// https://typicode.github.io/husky/getting-started.html#automatic-recommended
+	
+	Packages: +2
+	++
+	Progress: resolved 2, reused 0, downloaded 2, added 2, done
+	husky-init updating package.json
+		setting prepare script to command "husky install"
+	husky - Git hooks installed
+	husky - created .husky/pre-commit
+
+	please review changes in package.json
+	Packages: +2 -122
+	++
+	Progress: resolved 339, reused 318, downloaded 0, added 1, done
+
+	> animal@0.0.0 prepare /Users/shao/workspace/animal
+	> husky install
+
+	husky - Git hooks installed
+
+	devDependencies:
+	- commitizen 4.3.0
+	- cz-conventional-changelog 3.3.0
+	- cz-customizable 7.0.0
+	+ husky 8.0.3
+
+	Done in 2.3s
+
+-----------------------------------------------------------------------------------------------------------------
+pnpm install --save-dev lint-staged
+-----------------------------------------------------------------------------------------------------------------
+pnpm install --save-dev prettier
+-----------------------------------------------------------------------------------------------------------------
+pnpm install --save-dev eslint-plugin-prettier
+-----------------------------------------------------------------------------------------------------------------
