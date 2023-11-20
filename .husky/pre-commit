@@ -4,4 +4,4 @@
 
 # Exécuter la commande suivante pendant un `git commit`
 # (lors de l'exécution de la validation pré-commit)
-pnpm run lint:fix
+pnpm run lint
