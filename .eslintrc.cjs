@@ -14,8 +14,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended",
-    "plugin:prettier/recommended",
+    "prettier",
   ],
 
   // Ignore les fichiers et dossiers spécifiés lors de la vérification ESLint.
@@ -38,7 +37,7 @@ module.exports = {
   },
 
   // Ajoute les plugins nécessaires pour React, React Hooks, et Prettier.
-  plugins: ["react", "react-hooks", "prettier"],
+  plugins: ["react", "react-hooks"],
 
   // Personnalise les règles selon tes préférences.
   rules: {
