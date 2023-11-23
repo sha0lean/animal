@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* Applique une couleur de fond secondaire et une couleur de texte gris foncé au corps */
+  body {
+    @apply text-primary bg-primary;
+  }
+}
