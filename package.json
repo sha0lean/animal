@@ -8,14 +8,16 @@
     "build": "vite build",
     "lintvite": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "optimg": "bash src/assets/webp_optimizer.sh"
   },
   "scriptComments": {
     "dev": "        Lance le serveur de développement avec Vite",
     "build": "      Effectue la construction du projet avec Vite",
     "lintvite": "   Lance ESLint selon les recommandations de Vite",
     "lint": "       Lance ESLint pour vérifier tout le code",
-    "lint:fix": "   Lance ESLint pour corriger les erreurs"
+    "lint:fix": "   Lance ESLint pour corriger les erreurs",
+    "optimg": " script qui 'cwebp -lossless' toutes les photos non .webp "
   },
   "husky": {
     "hooks": {
