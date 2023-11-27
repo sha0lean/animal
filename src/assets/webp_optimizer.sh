@@ -67,14 +67,14 @@ webp_optimizer() {
         ignored_files+=("$file")
     fi
 }
-export -f convert_to_webp # Rend la fonction accessible pour find
+export -f webp_optimizer # Rend la fonction accessible pour find
 
 # Début du script
 echo -e "-------------------------------"
 echo -e "\nDébut de la conversion des images...\n"
 
 # Trouve et convertit les fichiers qui ne sont pas au format WebP
-find "$DIR" -type f ! -name '*.webp' -exec bash -c 'convert_to_webp "$0"' {} \;
+find "$DIR" -type f ! -name '*.webp' -exec bash -c 'webp_optimizer "$0"' {} \;
 
 # Affiche les fichiers ignorés
 if [ ${#ignored_files[@]} -ne 0 ]; then
