@@ -10,18 +10,18 @@ export default {
       lg:   "976px",
       xl:   "1440px",
     },
-    colors: {
-      // bg-"alias" || text-"alias" || border-"alias" || etc...
-      blue:        "#1fb6ff",
-      pink:        "#EA80FC",
-      green:       "#13ce66",
-      gray:        "#8492a6",
-      graylight:   "#d3dce6",
-      graydark:    "#273444",
-    },
 
     extend: {
       // ajouter ou modifier légèrement les paramètres par défaut.
+      colors: {
+        // bg-"alias" || text-"alias" || border-"alias" || etc...
+        blue:        "#1fb6ff",
+        pink:        "#EA80FC",
+        green:       "#13ce66",
+        gray:        "#8492a6",
+        graylight:   "#d3dce6",
+        graydark:    "#273444",
+      },
       backgroundColor: {
         // bg-"alias"
         primary:     "#292929",
