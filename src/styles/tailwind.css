@@ -5,6 +5,12 @@
 @layer components {
   /* Applique une couleur de fond secondaire et une couleur de texte gris foncé au corps */
   body {
-    @apply text-primary bg-primary;
+    @apply bg-primary text-primary;
+    #root {
+      background-image: url("../assets/artwork/lion_banner.webp");
+      background-position: top;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
 }
