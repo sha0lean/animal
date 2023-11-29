@@ -8,7 +8,7 @@
     @apply bg-primary text-primary;
     #root {
       background-image: url("../assets/artwork/lion_banner.webp");
-      background-position: top;
+      background-position: right;
       background-size: cover;
       background-repeat: no-repeat;
     }
