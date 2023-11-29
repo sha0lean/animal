@@ -1,3 +1,5 @@
+//=components/ui/Footer.jsx
+
 function Footer() {
   return (
     <footer className="bg-amber-900 py-5 text-center text-white">
