@@ -1,7 +1,6 @@
 //=components/hero/Hero.jsx
 
 import logoAnimal from "../../assets/logo/logo_animal_white.png"
-import CallToAction from "../ui/CallToAction.jsx"
 import styles from "./hero.module.css"
 
 const Hero = () => {
@@ -17,10 +16,10 @@ const Hero = () => {
         alt="Logo du Bar"
         className="w-2/3 items-center justify-center p-20 sm:max-w-md md:max-w-md"
       />
-      <div>
+      {/* <div>
         <CallToAction icon="/path/to/icon.png" link="https://example.com" />
         <CallToAction icon="/path/to/icon.png" link="https://example.com" />
-      </div>
+      </div> */}
     </div>
   )
 }
