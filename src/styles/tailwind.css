@@ -1,16 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
-  /* Applique une couleur de fond secondaire et une couleur de texte gris foncé au corps */
   body {
     @apply bg-primary text-primary;
-    #root {
-      background-image: url("../assets/artwork/lion_banner.webp");
-      background-position: right;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
+    @apply bg-contain bg-top bg-no-repeat;
+    background-image: url("../assets/artwork/lion_banner.webp");
   }
 }
