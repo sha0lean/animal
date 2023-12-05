@@ -1,24 +1,31 @@
-//=componentsnts/ui/CallToAction.jsx
+//=components/ui/CallToAction.jsx
 
-function CallToAction({ icon, link }) {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import PropTypes from "prop-types"
+
+const CallToAction = ({ icon, altText, link, iconSize }) => {
+  // Classe pour la taille de l'icône, par exemple `fa-2x`, `fa-3x`, etc.
+  const iconSizeClass = `fa-${iconSize}`
+
   return (
-    <a
-      href={link} // URL de redirection
-      className="flex h-24 w-24 items-center justify-center rounded-full bg-secondary text-secondary"
-      // bg-blue-500 : couleur de fond
-      // flex : active Flexbox pour aligner les éléments
-      // h-24 w-24 : hauteur et largeur fixées pour un cercle parfait
-      // items-center justify-center : centre l'élément (icône) dans le Flex container
-      // rounded-full : rend les coins complètement arrondis pour un cercle parfait
-    >
-      <img
-        src={icon} // Chemin de l'icône
-        alt="CTA" // Texte alternatif pour l'icône
-        className="h-6 w-6" // Taille de l'icône
-        // h-6 w-6 : hauteur et largeur de l'icône
-      />
-    </a>
+    <div id="CTA" className="flex w-1/4 flex-col items-end px-16">
+      <a
+        href={link}
+        className="flex h-16 w-16 items-center justify-center rounded-full bg-white p-4 text-black"
+      >
+        {/* Utilise iconSizeClass pour contrôler la taille de l'icône */}
+        <FontAwesomeIcon icon={icon} className={`animate-pulse ${iconSizeClass}`} />
+        {altText && <span className="sr-only">{altText}</span>}
+      </a>
+    </div>
   )
+}
+
+CallToAction.propTypes = {
+  icon: PropTypes.object.isRequired,
+  altText: PropTypes.string,
+  link: PropTypes.string.isRequired,
+  iconSize: PropTypes.oneOf(["lg", "2x", "3x", "4x", "5x"]), // Exemple de tailles FontAwesome
 }
 
 export default CallToAction
