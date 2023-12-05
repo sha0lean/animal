@@ -33,14 +33,20 @@ const Navbar = () => {
 
   return (
     <nav className="h-fit w-screen">
-      <container onClick={toggleMobileNav} className="relative z-10 m-auto flex h-16 items-center px-8 text-white">
-        <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} className="cursor-pointer text-xl md:hidden" />
+      <container
+        onClick={toggleMobileNav}
+        className="relative z-10 m-auto flex h-16 items-center justify-start px-8 text-white"
+      >
+        <FontAwesomeIcon
+          icon={isMenuOpen ? faTimes : faBars}
+          className="cursor-pointer text-xl md:hidden"
+        />
         <ul
           id="navItems group"
           className={`
-          hidden cursor-pointer items-center
-          font-heading text-3xl
-          sm:flex lg:gap-20
+          hidden cursor-pointer
+          gap-16 font-heading
+          text-3xl md:flex lg:gap-20
           ${isMobile && isMenuOpen ? "hidden" : "flex"} `}
         >
           <NavItem name="nos menus" link="/menus" />
@@ -51,7 +57,6 @@ const Navbar = () => {
         <ul
           id="mobileNav"
           className={`
-            // Position
             fixed left-0 top-0 z-0 ${isMobile && isMenuOpen ? "" : "left-[-100%]"}
 
             flex h-full w-[100%] 

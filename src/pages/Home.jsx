@@ -1,3 +1,5 @@
+//=components/pages/Home.jsx
+
 import Card from "../components/card/Card"
 import Hero from "../components/hero/Hero"
 import Breakpoints from "../components/utils/Breakpoints"
