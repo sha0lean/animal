@@ -8,7 +8,7 @@ const CallToAction = ({ icon, altText, link, iconSize }) => {
   const iconSizeClass = `fa-${iconSize}`
 
   return (
-    <div id="CTA" className="flex w-1/4 flex-col items-end px-16">
+    <div id="CTA" className="flex w-1/4 flex-col items-end px-10 md:px-16">
       <a
         href={link}
         className="flex h-16 w-16 items-center justify-center rounded-full bg-white p-4 text-black"

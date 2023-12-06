@@ -12,31 +12,37 @@ const Hero = () => {
       <img
         src={logoAnimal}
         alt="Logo du Bar"
-        className="w-5/6 px-10 py-10 sm:w-3/5 sm:py-10 md:w-1/2 md:pb-40 md:pt-20 lg:w-5/12 lg:pl-32"
+        className="sm:pr-10sm:w-3/5 md:pb- w-5/6 px-10 py-0 pr-32 sm:py-10 md:w-1/2 md:pl-16 md:pt-20 lg:w-5/12 lg:pl-32"
       />
-      <div className="mb-8 flex  flex-row border-cyan-400">
+      <div className="mb-8 mt-10 flex  flex-row border-cyan-400">
         <div
           id="headlines"
-          className="flex h-full w-3/4 flex-col justify-center space-y-4 border-purple-400 px-16"
+          className="flex h-full w-5/6 flex-col justify-center space-y-4 border-purple-400 pl-16"
         >
-          <h1 className="font-heading text-5xl font-bold">Bar à Cocktails & Tapas</h1>
-          <p className="max-w-md font-heading text-gray-300">
-            À l&apos;origine de l&apos;Animal Lodge Bar, Nelly et Bruno, véritable
-            globe-trotters passionnés du voyage et fervents défenseurs des animaux, ont
-            créé un havre qui évoque un univers d&apos;aventures.
+          <h1 className="font-heading text-3xl font-bold sm:text-4xl md:text-5xl">
+            Bar à<br />
+            Cocktails
+            <br />& Tapas
+          </h1>
+
+          <p className="max-w-md pr-10 font-heading text-sm text-gray-300 sm:text-lg">
+            À l&apos;origine de l&apos;Animal Lodge Bar, Nelly et Bruno,
+            <br /> véritable globe-trotters passionnés du voyage <br /> et fervents
+            défenseurs des animaux, <br /> ont créé un havre qui évoque un univers
+            d&apos;aventures.
           </p>
         </div>
-        <div id="CTA" className="flex w-1/4 flex-col items-end gap-5 px-16">
+        <div id="CTA" className="my-auto flex w-1/6 flex-col items-end gap-6">
           <CallToAction
             icon={faPhone}
-            altText="Commander un café"
-            link="/order-coffee"
+            altText="Contact par téléphone"
+            link="/Telephone"
             iconSize="2x"
           />
           <CallToAction
             icon={faWhatsapp}
-            altText="Commander un café"
-            link="/order-coffee"
+            altText="Contact par Whatsapp"
+            link="/Whatsapp"
             iconSize="3x"
           />
         </div>
