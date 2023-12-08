@@ -4,7 +4,7 @@ const Hippo = () => {
   return (
     <div
       id="hippo"
-      className="relative h-[30vh] w-full bg-[size:100%] bg-top bg-no-repeat sm:h-[46vh] md:bg-[size:100%]"
+      className="relative h-[240px] w-full bg-[size:100%] bg-top bg-no-repeat sm:h-[360px] md:h-[510px] lg:h-[650px]"
       style={{ backgroundImage: `url('/src/assets/artwork/hippo.webp')` }}
     >
       <div className="flex h-full items-start justify-end pr-10 font-heading">
