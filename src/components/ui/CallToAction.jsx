@@ -4,16 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import PropTypes from "prop-types"
 
 const CallToAction = ({ icon, altText, link, iconSize }) => {
-  // Classe pour la taille de l'icône, par exemple `fa-2x`, `fa-3x`, etc.
   const iconSizeClass = `fa-${iconSize}`
 
   return (
-    <div id="CTA" className="flex w-1/4 flex-col items-end px-10 md:px-16">
+    <div id="CalltoAction">
       <a
         href={link}
-        className="flex h-16 w-16 items-center justify-center rounded-full bg-white p-4 text-black"
+        className="flex h-12 w-12 items-center justify-center rounded-full bg-black text-white "
       >
-        {/* Utilise iconSizeClass pour contrôler la taille de l'icône */}
         <FontAwesomeIcon icon={icon} className={`animate-pulse ${iconSizeClass}`} />
         {altText && <span className="sr-only">{altText}</span>}
       </a>
@@ -25,7 +23,7 @@ CallToAction.propTypes = {
   icon: PropTypes.object.isRequired,
   altText: PropTypes.string,
   link: PropTypes.string.isRequired,
-  iconSize: PropTypes.oneOf(["lg", "2x", "3x", "4x", "5x"]), // Exemple de tailles FontAwesome
+  iconSize: PropTypes.oneOf(["lg", "2x", "3x", "4x", "5x"]),
 }
 
 export default CallToAction

@@ -17,9 +17,9 @@ const Hero = () => {
       <div className="mb-8 mt-10 flex  flex-row border-cyan-400">
         <div
           id="headlines"
-          className="flex h-full w-5/6 flex-col justify-center space-y-4 border-purple-400 pl-16"
+          className="flex h-full w-5/6 flex-col justify-center space-y-4 border-purple-400 pl-4 sm:pl-16"
         >
-          <h1 className="font-heading text-3xl font-bold sm:text-4xl md:text-5xl">
+          <h1 className="font-heading text-2xl font-bold sm:text-3xl md:text-5xl">
             Bar à<br />
             Cocktails
             <br />& Tapas
@@ -32,18 +32,21 @@ const Hero = () => {
             d&apos;aventures.
           </p>
         </div>
-        <div id="CTA" className="my-auto flex w-1/6 flex-col items-end gap-6">
+        <div
+          id="CTA"
+          className="my-auto flex w-1/6 flex-col items-end gap-6 pr-6 sm:pr-10 md:pr-20"
+        >
           <CallToAction
             icon={faPhone}
             altText="Contact par téléphone"
             link="/Telephone"
-            iconSize="2x"
+            iconSize="lg"
           />
           <CallToAction
             icon={faWhatsapp}
             altText="Contact par Whatsapp"
             link="/Whatsapp"
-            iconSize="3x"
+            iconSize="2x"
           />
         </div>
       </div>
