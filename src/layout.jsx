@@ -2,6 +2,7 @@
 
 import Footer from "./components/ui/Footer"
 import Header from "./components/ui/Header"
+import Breakpoints from "./components/utils/Breakpoints"
 
 function Layout({ children }) {
   return (
@@ -9,6 +10,7 @@ function Layout({ children }) {
       <Header />
       {children}
       <Footer />
+      <Breakpoints />
     </div>
   )
 }

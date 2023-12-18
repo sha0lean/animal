@@ -3,7 +3,7 @@
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 import { faPhone } from "@fortawesome/free-solid-svg-icons"
 
-import logoAnimal from "../../assets/logo/logo_ANIMAL_black.webp"
+import logoAnimal from "../../assets/logo/logo_animal_white.webp"
 import CallToAction from "../ui/CallToAction.jsx"
 
 const Hero = () => {
@@ -12,7 +12,7 @@ const Hero = () => {
       <img
         src={logoAnimal}
         alt="Logo du Bar"
-        className="sm:pr-10sm:w-3/5 md:pb- w-5/6 px-10 py-0 pr-32 sm:py-10 md:w-1/2 md:pl-16 md:pt-20 lg:w-5/12 lg:pl-32"
+        className="md:pb- w-5/6 px-10 py-0 pr-32 sm:w-3/5 sm:py-10 sm:pr-10 md:w-1/2 md:pl-16 md:pt-20 lg:w-5/12 lg:pl-32"
       />
       <div className="mb-8 mt-10 flex  flex-row border-cyan-400">
         <div
