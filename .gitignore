@@ -22,7 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# ignore all files in src/assets
-src/assets/*
-# need to split HD pic and exploitable pic
