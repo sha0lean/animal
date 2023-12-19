@@ -1,11 +1,11 @@
 //=components/pages/Home.jsx
 
+import Card from ".@components/card/Card"
+import Hero from ".@components/hero/Hero"
+import Hippo from ".@components/hippo/Hippo"
+import CallToAction from ".@components/ui/CallToAction"
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 import { faPhone } from "@fortawesome/free-solid-svg-icons"
-import Card from "../components/card/Card"
-import Hero from "../components/hero/Hero"
-import Hippo from "../components/hippo/Hippo"
-import CallToAction from "../components/ui/CallToAction"
 
 const Home = () => {
   return (
@@ -15,10 +15,10 @@ const Home = () => {
         id="Cards"
         className="container mx-auto mb-14 grid grid-cols-1 gap-14 px-4 py-16 sm:px-6 md:grid-cols-2 md:gap-10 lg:max-w-6xl lg:grid-cols-4 lg:px-8"
       >
-        <Card imageUrl="./src/assets/cards/card_lieu.webp" title="lieu" />
-        <Card imageUrl="./src/assets/cards/card_cocktail.webp" title="cocktails" />
-        <Card imageUrl="./src/assets/cards/card_vins.webp" title="vins & bières" />
-        <Card imageUrl="./src/assets/cards/card_tapas.webp" title="tapas" />
+        <Card imageUrl="@/assets/cards/card_lieu.webp" title="lieu" />
+        <Card imageUrl="@/assets/cards/card_cocktail.webp" title="cocktails" />
+        <Card imageUrl="@/assets/cards/card_vins.webp" title="vins & bières" />
+        <Card imageUrl="@/assets/cards/card_tapas.webp" title="tapas" />
       </div>
       <Hippo />
       <div

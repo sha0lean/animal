@@ -1,8 +1,8 @@
 //=src/Layout.jsx
 
-import Footer from "./components/ui/Footer"
-import Header from "./components/ui/Header"
-import Breakpoints from "./components/utils/Breakpoints"
+import Footer from "@components/ui/Footer"
+import Header from "@components/ui/Header"
+import Breakpoints from "@components/utils/Breakpoints"
 
 function Layout({ children }) {
   return (
