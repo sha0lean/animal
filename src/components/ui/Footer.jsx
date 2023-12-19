@@ -1,10 +1,12 @@
 //=components/ui/Footer.jsx
+import zebraManeImg from "@assets/artwork/zebraMane.webp"
+import cocktailImg from "@assets/cocktails/cocktail1.webp"
 
 function Footer() {
   return (
     <footer className="relative h-[350px] w-full sm:h-[580px] md:h-[760px] lg:h-[1080px]">
       <img
-        src="/src/assets/artwork/zebraMane.webp"
+        src={zebraManeImg}
         alt="Crinière de zèbre"
         className="absolute bottom-0 w-full "
       />
@@ -28,11 +30,7 @@ function Footer() {
           id="CocktailArch"
           className="lg:-bottom-30 bottom-0 mt-10 flex h-auto w-2/5 overflow-hidden rounded-t-full"
         >
-          <img
-            src="/src/assets/cocktails/cocktails_arch.webp"
-            alt="Cocktails Fruités Cosy"
-            className=""
-          />
+          <img src={cocktailImg} alt="Cocktails Fruités Cosy" className="" />
         </div>
       </div>
     </footer>

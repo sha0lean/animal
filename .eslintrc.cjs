@@ -6,6 +6,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    node: true,
   },
 
   // Ajoute les règles recommandées pour ESLint, React, React Hooks, et Prettier.
@@ -47,5 +48,8 @@ module.exports = {
     // Règles pour les React Hooks.
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+
+    // warn au lieu d'une erreur quand variable inutilisée
+    "no-unused-vars": "warn",
   },
 }
