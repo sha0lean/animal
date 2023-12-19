@@ -10,11 +10,6 @@ export default {
       lg: "976px",
       xl: "1440px",
     },
-    fontFamily: {
-      heading:  ["Italiana",  "sans-serif"],
-      body:     ["Open Sans", "sans-serif"],
-      special:  ["Geist",     "sans-serif"],
-    },
     extend: {
       // ajouter ou modifier légèrement les paramètres par défaut.
       colors: {
@@ -35,7 +30,7 @@ export default {
       fontFamily: {
         // font-"alias"
         heading:  ["Italiana",  "sans-serif"],
-        body:     ["Open Sans", "sans-serif"],
+        body:     ["Montserrat", "sans-serif"],
         special:  ["Geist",     "sans-serif"],
       },
       plugins: [

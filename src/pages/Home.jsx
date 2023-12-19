@@ -4,7 +4,6 @@ import cardCocktails from "@assets/cards/card_cocktail.webp"
 import cardLieu from "@assets/cards/card_lieu.webp"
 import cardTapas from "@assets/cards/card_tapas.webp"
 import cardVins from "@assets/cards/card_vins.webp"
-
 import Card from "@components/card/Card"
 import Hero from "@components/hero/Hero"
 import Hippo from "@components/hippo/Hippo"
@@ -28,7 +27,7 @@ const Home = () => {
       <Hippo />
       <div
         id="description"
-        className="flex flex-col gap-10 bg-secondary p-8 text-justify font-heading text-secondary sm:p-20 md:flex-row md:gap-20"
+        className="flex flex-col gap-10 bg-secondary p-8 text-justify font-body text-secondary sm:p-20 md:flex-row md:gap-20"
       >
         <div className="prose md:prose-xl text-bold md:w-1/2">
           <p id="text1">

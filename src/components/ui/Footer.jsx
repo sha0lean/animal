@@ -1,4 +1,5 @@
 //=components/ui/Footer.jsx
+
 import zebraManeImg from "@assets/artwork/zebraMane.webp"
 import cocktailImg from "@assets/cocktails/cocktail1.webp"
 
@@ -11,16 +12,16 @@ function Footer() {
         className="absolute bottom-0 w-full "
       />
       <div id="FooterInfos" className="z-0 flex justify-around">
-        <div className="flex w-1/2 flex-col pt-4 font-heading sm:pl-8 sm:pt-8 md:pl-16 md:pt-16 lg:pl-28 lg:pt-28 ">
+        <div className="flex w-1/2 flex-col pt-4 font-body sm:pl-8 sm:pt-8 md:pl-16 md:pt-16 lg:pl-28 lg:pt-28 ">
           <p className="text-md pb-5 sm:text-2xl md:text-3xl">
             @animallodgebar <br />
             Notre Restaurant :<br /> Le Christina
           </p>
-          <p className="text-md pb-5 font-special sm:text-2xl md:text-3xl">
+          <p className="text-md pb-5 font-body sm:text-2xl md:text-3xl">
             {" "}
             04 50 38 69 45
           </p>
-          <p className="text-md font-special sm:text-2xl md:text-3xl">
+          <p className="text-md font-body sm:text-2xl md:text-3xl">
             20 Rue des Esserts
             <br />
             74100 Ville-la-Grand

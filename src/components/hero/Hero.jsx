@@ -24,7 +24,7 @@ const Hero = () => {
             <br />& Tapas
           </h1>
 
-          <p className="max-w-md pr-10 font-heading text-sm text-gray-300 sm:text-lg">
+          <p className="max-w-lg pr-10 font-body text-sm text-gray-300 sm:text-lg">
             À l&apos;origine de l&apos;Animal Lodge Bar, Nelly et Bruno,
             <br /> véritable globe-trotters passionnés du voyage <br /> et fervents
             défenseurs des animaux, <br /> ont créé un havre qui évoque un univers
