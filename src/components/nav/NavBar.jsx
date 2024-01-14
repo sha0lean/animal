@@ -50,9 +50,8 @@ const Navbar = () => {
           ${isMobile && isMenuOpen ? "hidden" : "flex"} `}
         >
           <NavItem name="nos menus" link="/menus" />
-          <NavItem name="événements" link="/events" />
+          <NavItem name="à propos" link="/about" />
           <NavItem name="l'équipe" link="/team" />
-          <NavItem name="contact" link="/contact" />
         </ul>
         <ul
           id="mobileNav"
@@ -68,9 +67,8 @@ const Navbar = () => {
           `}
         >
           <NavItem name="nos menus" link="/menus" />
-          <NavItem name="événements" link="/events" />
+          <NavItem name="à propos" link="/about" />
           <NavItem name="l'équipe" link="/team" />
-          <NavItem name="contact" link="/contact" />
         </ul>
       </container>
     </nav>
