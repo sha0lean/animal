@@ -6,7 +6,7 @@ const Hippo = () => {
   return (
     <div
       id="hippo"
-      className="relative h-[240px] w-full bg-[size:100%] bg-top bg-no-repeat sm:h-[360px] md:h-[510px] lg:h-[650px]"
+      className="relative h-[240px] w-full bg-[size:100%] bg-top bg-no-repeat sm:h-[360px] md:h-[510px] lg:h-[650px] xl:h-[900px]"
       style={{ backgroundImage: `url(${hippoImage})` }}
     >
       <div className="flex h-full items-start justify-end pr-10 font-heading">
