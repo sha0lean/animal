@@ -8,16 +8,16 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
 
 function App() {
   return (
-    <Layout>
-      <Router>
+    <Router>
+      <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menus" element={<Menus />} />
           <Route path="/about" element={<About />} />
           <Route path="/team" element={<Team />} />
         </Routes>
-      </Router>
-    </Layout>
+      </Layout>
+    </Router>
   )
 }
 

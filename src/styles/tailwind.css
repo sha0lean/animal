@@ -11,7 +11,9 @@
   }
 }
 
-#root {
+/* Ajoute ça dans ton fichier CSS global ou un fichier CSS module */
+#LionHome,
+.home-background {
   background-image: url("@assets/artwork/lion_banner.webp");
   position: relative;
   z-index: 1;
