@@ -2,7 +2,6 @@
 
 import Footer from "@components/ui/Footer"
 import Header from "@components/ui/Header"
-import Breakpoints from "@components/utils/Breakpoints"
 import { useLocation } from "react-router-dom"
 
 function Layout({ children }) {
@@ -24,13 +23,11 @@ function Layout({ children }) {
     // La classe 'layoutClass' est ajoutée à la liste de classes; elle sera 'home-background' ou '' selon l'URL
     <div
       id={isHomePage ? "LionHome" : ""}
-      className={`max-w-full overflow-hidden border border-indigo-500 ${layoutClass}`}
+      className={`max-w-full overflow-hidden ${layoutClass}`}
     >
       <Header />
-      <Breakpoints />
       {children}
       <Footer />
-      <Breakpoints />
     </div>
   )
 }

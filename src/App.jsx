@@ -4,11 +4,13 @@ import About from "@/pages/About"
 import Home from "@/pages/Home"
 import Menus from "@/pages/Menus"
 import Team from "@/pages/Team"
+import Breakpoints from "@components/utils/Breakpoints"
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
 
 function App() {
   return (
     <Router>
+      <Breakpoints />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
