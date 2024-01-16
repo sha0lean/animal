@@ -22,3 +22,20 @@
   @apply bg-contain bg-no-repeat;
   height: 100vh;
 }
+
+@media (min-width: 768px) {
+  .fixed-image {
+    display: block;
+  }
+  .parallax-image {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .fixed-image {
+    display: none;
+  }
+  .parallax-image {
+    display: block;
+  }
+}
