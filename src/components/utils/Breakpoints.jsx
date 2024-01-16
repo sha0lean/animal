@@ -44,8 +44,12 @@ function Breakpoints() {
   return (
     <div
       className={`${
-        isSticky ? "sticky top-0" : "fixed bottom-0"
-      } left-0 z-10 w-full bg-neutral-900 p-1 font-special text-white  shadow-xl backdrop-blur-lg sm:bg-neutral-900 md:bg-neutral-800 lg:bg-neutral-700 xl:bg-neutral-600`}
+        isSticky
+          ? "sticky top-0 border-b border-slate-400"
+          : "fixed bottom-0 border-t border-slate-400"
+      } left-0 z-10 w-full bg-neutral-900 p-1 font-special 
+      text-white shadow-xl backdrop-blur-lg 
+      sm:bg-neutral-900 md:bg-neutral-800 lg:bg-neutral-700 xl:bg-neutral-600`}
     >
       <div className="flex justify-between">
         <div className="w-1/3 text-left">
