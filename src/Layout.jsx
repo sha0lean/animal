@@ -21,10 +21,7 @@ function Layout({ children }) {
     // 'div' est le conteneur principal du Layout
     // Si 'isHomePage' est vrai, l'ID 'LionHome' est appliqué à la div
     // La classe 'layoutClass' est ajoutée à la liste de classes; elle sera 'home-background' ou '' selon l'URL
-    <div
-      id={isHomePage ? "LionHome" : ""}
-      className={`max-w-full overflow-hidden ${layoutClass}`}
-    >
+    <div id={isHomePage ? "LionHome" : ""} className={` ${layoutClass}`}>
       <Header />
       {children}
       <Footer />

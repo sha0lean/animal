@@ -1,4 +1,5 @@
-// src/App.jsx
+//= src/App.jsx
+
 import Layout from "@/Layout"
 import About from "@/pages/About"
 import Home from "@/pages/Home"

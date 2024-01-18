@@ -20,7 +20,7 @@ export default {
       backgroundColor: {
         // bg-"alias"
         primary: "#1E1E1E",
-        secondary: "#fff0bf",
+        secondary: "#DDCFB9",
       },
       textColor: {
         // text-"alias"

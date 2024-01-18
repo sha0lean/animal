@@ -32,7 +32,7 @@ const Navbar = () => {
   console.log("   isMobile:  ", isMobile, "\n isMenuOpen:  ", isMenuOpen)
 
   return (
-    <nav className="h-fit w-screen">
+    <nav className="h-fit">
       <container
         onClick={toggleMobileNav}
         className="relative z-10 m-auto flex h-16 items-center justify-start px-8 text-white"
@@ -49,6 +49,7 @@ const Navbar = () => {
           text-3xl md:flex lg:gap-20
           ${isMobile && isMenuOpen ? "hidden" : "flex"} `}
         >
+          <NavItem name="accueil" link="/" />
           <NavItem name="nos menus" link="/menus" />
           <NavItem name="à propos" link="/about" />
           <NavItem name="l'équipe" link="/team" />
@@ -66,6 +67,7 @@ const Navbar = () => {
             text-4xl duration-500 ease-in-out
           `}
         >
+          <NavItem name="accueil" link="/" />
           <NavItem name="nos menus" link="/menus" />
           <NavItem name="à propos" link="/about" />
           <NavItem name="l'équipe" link="/team" />
