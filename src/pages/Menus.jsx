@@ -1,6 +1,7 @@
 //=components/pages/Menus.jsx
 
 import imgRegalezVous from "@assets/cocktails/cocktail4.webp"
+import PDFViewer from "@components/utils/PDFViewer"
 import { Parallax } from "react-parallax"
 
 const Menus = () => {
@@ -69,6 +70,9 @@ const Menus = () => {
             découvrez notre carte
           </h2>
         </div>
+      </section>
+      <section>
+        <PDFViewer />
       </section>
     </>
   )

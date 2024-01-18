@@ -6,7 +6,13 @@ import Home from "@/pages/Home"
 import Menus from "@/pages/Menus"
 import Team from "@/pages/Team"
 import Breakpoints from "@components/utils/Breakpoints"
+import { pdfjs } from "react-pdf"
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/build/pdf.worker.min.js",
+  import.meta.url
+).toString()
 
 function App() {
   return (

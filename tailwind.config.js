@@ -11,11 +11,13 @@ export default {
       xl: "1440px",
     },
     extend: {
-      // ajouter ou modifier légèrement les paramètres par défaut.
+       // ajouter ou modifier légèrement les paramètres par défaut.
       colors: {
         // bg-"alias" || text-"alias" || border-"alias" || etc...
-        blue: "#1fb6ff",
+        blue: "#0022ff",
         pink: "#EA80FC",
+        yellow: "#738700",
+        cyan: "#003e32",
       },
       backgroundColor: {
         // bg-"alias"

@@ -11,6 +11,19 @@
   }
 }
 
+.b1 {
+  @apply border-2 border-double border-pink;
+}
+.b2 {
+  @apply border-yellow border-2;
+}
+.b3 {
+  @apply border-4 border-dotted border-blue;
+}
+.b4 {
+  @apply border-cyan border-4 border-double;
+}
+
 /* Ajoute ça dans ton fichier CSS global ou un fichier CSS module */
 #LionHome,
 .home-background {
