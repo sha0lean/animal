@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "optimg": "bash src/assets/webp_optimizer.sh",
+    "optimgw": "powershell -ExecutionPolicy Bypass -File src\\assets\\webp_optimizer_win.ps1",
     "build-css": "postcss src/styles.css -o dist/styles.css"
   },
   "scriptComments": {
@@ -18,7 +19,8 @@
     "lintvite": "   Lance ESLint selon les recommandations de Vite",
     "lint": "       Lance ESLint pour vérifier tout le code",
     "lint:fix": "   Lance ESLint pour corriger les erreurs",
-    "optimg": "     Script qui execute les photos dans le dossier src/assets",
+    "optimg": "     Script Mac qui optimise les photos dans le dossier src/assets",
+    "optimgw": "    Script Windows",
     "build-css": "  Applique les plugins postcss.config.js pour créer dist/styles.css"
   },
   "husky": {
