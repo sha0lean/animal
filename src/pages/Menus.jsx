@@ -7,9 +7,8 @@ import PageMenu3 from "@assets/menu/menu_3.webp"
 import PageMenu4 from "@assets/menu/menu_4.webp"
 import PageMenu5 from "@assets/menu/menu_5.webp"
 import PageMenu6 from "@assets/menu/menu_6.webp"
-import PDFViewer from "@components/utils/PDFViewer"
+import MenuCarousel from "@components/utils/MenuCarousel.jsx"
 import { Parallax } from "react-parallax"
-import MenuCarousel from "../components/utils/MenuCarousel.jsx"
 
 const Menus = () => {
   const menuImages = [PageMenu1, PageMenu2, PageMenu3, PageMenu4, PageMenu5, PageMenu6]
@@ -80,7 +79,6 @@ const Menus = () => {
           </h2>
         </div>
       </section>
-      {/* <section className="my-20"><PDFViewer /></section> */}
       <section className="md:pb- px-12 py-10">
         <MenuCarousel menus={menuImages} />
       </section>
