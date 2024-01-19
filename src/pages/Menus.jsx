@@ -1,10 +1,19 @@
 //=components/pages/Menus.jsx
 
 import imgRegalezVous from "@assets/cocktails/cocktail4.webp"
+import PageMenu1 from "@assets/menu/menu_1.webp"
+import PageMenu2 from "@assets/menu/menu_2.webp"
+import PageMenu3 from "@assets/menu/menu_3.webp"
+import PageMenu4 from "@assets/menu/menu_4.webp"
+import PageMenu5 from "@assets/menu/menu_5.webp"
+import PageMenu6 from "@assets/menu/menu_6.webp"
 import PDFViewer from "@components/utils/PDFViewer"
 import { Parallax } from "react-parallax"
+import MenuCarousel from "../components/utils/MenuCarousel.jsx"
 
 const Menus = () => {
+  const menuImages = [PageMenu1, PageMenu2, PageMenu3, PageMenu4, PageMenu5, PageMenu6]
+
   return (
     <>
       <section className="flex flex-col md:flex-row md:pt-10">
@@ -71,8 +80,9 @@ const Menus = () => {
           </h2>
         </div>
       </section>
-      <section className="my-20">
-        <PDFViewer />
+      {/* <section className="my-20"><PDFViewer /></section> */}
+      <section className="md:pb- px-12 py-10">
+        <MenuCarousel menus={menuImages} />
       </section>
     </>
   )
