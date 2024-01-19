@@ -2,7 +2,7 @@
 
 //=components/utils/MenuCarousel.jsx
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { FullScreen, useFullScreenHandle } from "react-full-screen"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick-theme.css"
@@ -13,28 +13,6 @@ const MenuCarousel = ({ menus }) => {
   const [isFullScreen, setIsFullScreen] = useState(false)
   const [isSliding, setIsSliding] = useState(false)
   const [hoveredImageIndex, setHoveredImageIndex] = useState(null)
-  const [touchStart, setTouchStart] = useState(null) // État pour gérer le début du toucher
-
-  // Ajoute un effet pour réinitialiser l'index d'image survolée lors de la sortie du plein écran
-  useEffect(() => {
-    if (!isFullScreen) {
-      setHoveredImageIndex(null)
-    }
-  }, [isFullScreen])
-
-  // Gérer le début du toucher
-  const handleTouchStart = index => {
-    setTouchStart(index)
-  }
-
-  // Gérer la fin du toucher
-  const handleTouchEnd = index => {
-    // Si l'index de début du toucher est le même que l'index de fin, considérer cela comme un "hover"
-    if (touchStart === index) {
-      setHoveredImageIndex(index)
-    }
-    setTouchStart(null) // Réinitialiser l'état de début du toucher
-  }
 
   const toggleFullScreen = () => {
     setIsFullScreen(!isFullScreen)
@@ -96,9 +74,6 @@ const MenuCarousel = ({ menus }) => {
             key={index}
             style={containerFullScreenStyle} // Applique le style au conteneur
             className="relative p-4 focus:outline-none"
-            // Ajoute les gestionnaires pour le toucher
-            onTouchStart={() => handleTouchStart(index)}
-            onTouchEnd={() => handleTouchEnd(index)}
             onMouseEnter={() => setHoveredImageIndex(index)}
             onMouseLeave={() => setHoveredImageIndex(null)}
           >
