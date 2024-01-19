@@ -71,7 +71,7 @@ const Menus = () => {
           </h2>
         </div>
       </section>
-      <section>
+      <section className="my-20">
         <PDFViewer />
       </section>
     </>
