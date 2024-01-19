@@ -16,7 +16,9 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 function App() {
   return (
-    <Router>
+    <Router
+      basename={process.env.NODE_ENV === "production" ? process.env.PUBLIC_URL : "/"}
+    >
       <Breakpoints />
       <Layout>
         <Routes>
