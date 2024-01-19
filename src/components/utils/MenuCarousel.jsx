@@ -73,7 +73,7 @@ const MenuCarousel = ({ menus }) => {
           <div
             key={index}
             style={containerFullScreenStyle} // Applique le style au conteneur
-            className="relative p-4"
+            className="relative p-4 focus:outline-none"
             onMouseEnter={() => setHoveredImageIndex(index)}
             onMouseLeave={() => setHoveredImageIndex(null)}
           >
