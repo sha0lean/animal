@@ -1,83 +1,109 @@
-//=components/utils/MenuCarousel.jsx
+//= components/utils/MenuCarousel.jsx
 
-//=components/utils/MenuCarousel.jsx
-
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { FullScreen, useFullScreenHandle } from "react-full-screen"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick-theme.css"
 import "slick-carousel/slick/slick.css"
 
+//:: Composant
 const MenuCarousel = ({ menus }) => {
-  const handle = useFullScreenHandle()
-  const [isFullScreen, setIsFullScreen] = useState(false)
-  const [isSliding, setIsSliding] = useState(false)
-  const [hoveredImageIndex, setHoveredImageIndex] = useState(null)
+  //:: Initialisation des états
 
+  //: Utilisation du hook useFullScreenHandle pour gérer le mode plein écran
+  const handle = useFullScreenHandle()
+
+  //: Initialisation de l'état isFullScreen à false
+
+  const [isFullScreen, setIsFullScreen] = useState(false)
+
+  //: Initialisation de l'état hoveredImageIndex à null
+  const [hoveredImageIndex, setHoveredImageIndex] = useState(null)
+  const [isMobile, setIsMobile] = useState(false)
+
+  //: Basculer le mode plein écran
   const toggleFullScreen = () => {
-    setIsFullScreen(!isFullScreen)
-    isFullScreen ? handle.exit() : handle.enter()
+    setIsFullScreen(!isFullScreen) //: Inverse la valeur
+    //: si pas fullscreen :  sinon : ↓ (si fullscreen)
+    !isFullScreen ? handle.enter() : handle.exit()
   }
 
+  //:: Hooks
+  //: Hook pour Gérer le changement de la taille de l'écran pour ajuster isMobile
+  useEffect(() => {
+    //: Crée un objet mediaQuery pour vérifier la taille de l'écran
+    const mediaQuery = window.matchMedia("(max-width: 1024px)")
+    //: Met à jour l'état isMobile en fonction de la correspondance de la requête média
+    setIsMobile(mediaQuery.matches)
+
+    //: Gère le changement de la correspondance de la requête média
+    const handleMediaChange = e => setIsMobile(e.matches)
+
+    //: Ajoute un écouteur d'événement pour détecter les changements de la correspondance de la requête média
+    mediaQuery.addEventListener("change", handleMediaChange)
+    //: Nettoyer l'écouteur d'événement lors du démontage du composant
+    return () => mediaQuery.removeEventListener("change", handleMediaChange)
+  }, [])
+
+  //:: Paramètres du Slider
   const sliderSettings = {
     dots: true,
     infinite: !isFullScreen,
     speed: 500,
-    slidesToShow: 3, // Par défaut, affiche 3 images
-    slidesToScroll: 3, // Par défaut, défile de 3 en 3
+    slidesToShow: 3, //: Par défaut, affiche 3 images
+    slidesToScroll: 3, //: Par défaut, défile de 3 en 3
     swipe: !isFullScreen,
     responsive: [
       {
-        breakpoint: 1024, // lg breakpoint
+        breakpoint: 1024, //: lg breakpoint
         settings: {
-          slidesToShow: 2, // Sur les écrans lg, affiche 2 images
-          slidesToScroll: 2, // Sur les écrans lg, défile de 2 en 2
+          slidesToShow: 2, //: Sur les écrans lg, affiche 2 images
+          slidesToScroll: 2, //: Sur les écrans lg, défile de 2 en 2
         },
       },
       {
-        breakpoint: 768, // md breakpoint
+        breakpoint: 768, //: md breakpoint
         settings: {
-          slidesToShow: 1, // Sur les écrans md et plus petits, affiche 1 image
-          slidesToScroll: 1, // Sur les écrans md et plus petits, défile de 1 en 1
+          slidesToShow: 1, //: Sur les écrans md et plus petits, affiche 1 image
+          slidesToScroll: 1, //: Sur les écrans md et plus petits, défile de 1 en 1
         },
       },
     ],
-    beforeChange: () => setIsSliding(true),
-    afterChange: () => setIsSliding(false),
   }
 
-  const imageStyle = isFullScreen ? "image-fullscreen" : ""
+  //:: Custom Styles
+  const fullScreenStyles = {
+    container: isFullScreen
+      ? {
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+        }
+      : null,
+    image: isFullScreen
+      ? { maxWidth: "100%", maxHeight: "100vh", objectFit: "contain", margin: "auto" }
+      : null,
+  }
 
-  const containerFullScreenStyle = isFullScreen
-    ? {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "100vh",
-      }
-    : null
-
-  const imageFullScreenStyle = isFullScreen
-    ? {
-        maxWidth: "100%", // Limite la largeur maximale
-        maxHeight: "100vh", // Limite la hauteur maximale
-        objectFit: "contain",
-        margin: "auto",
-      }
-    : null
-
+  //:: Rendu JSX
   return (
     <FullScreen handle={handle}>
       <Slider {...sliderSettings}>
         {menus.map((menu, index) => (
           <div
             key={index}
-            style={containerFullScreenStyle} // Applique le style au conteneur
             className="relative p-4 focus:outline-none"
-            onMouseEnter={() => setHoveredImageIndex(index)}
-            onMouseLeave={() => setHoveredImageIndex(null)}
+            //: Appliquer les styles en mode plein écran au conteneurd
+            style={fullScreenStyles.container}
+            //: Gestionnaire d'événements pour les appareils non mobiles
+            {...(!isMobile && {
+              onMouseEnter: () => setHoveredImageIndex(index),
+              onMouseLeave: () => setHoveredImageIndex(null),
+            })}
           >
-            {hoveredImageIndex === index && (
+            {hoveredImageIndex === index && !isMobile && (
+              //: Style pour le cercle de survol
               <div
                 style={{
                   position: "absolute",
@@ -92,18 +118,19 @@ const MenuCarousel = ({ menus }) => {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                onClick={e => e.stopPropagation()} // Empêche la propagation de l'événement de clic
+                onClick={e => e.stopPropagation()} //: Empêche la propagation de l'événement de clic
               >
                 {/* Icône ou texte pour le plein écran */}
               </div>
             )}
+            {/* Image avec gestionnaire de clic pour basculer le mode plein écran */}
             <img
               src={menu}
               alt={`Menu ${index + 1}`}
-              style={imageFullScreenStyle} // Applique le style à l'image
-              className={`h-auto w-full cursor-pointer ${imageStyle}`}
-              onClick={isSliding ? null : toggleFullScreen} // Empêche le plein écran en cas de glissement
-              onMouseDown={() => setIsSliding(false)}
+              //: Appliquer les styles en mode plein écran à l'image
+              style={fullScreenStyles.image}
+              className="h-auto w-full cursor-pointer"
+              onClick={toggleFullScreen}
             />
           </div>
         ))}
