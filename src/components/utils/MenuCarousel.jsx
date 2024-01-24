@@ -11,25 +11,7 @@ const MenuCarousel = ({ menus }) => {
   const [hoveredImageIndex, setHoveredImageIndex] = useState(null)
   const [isMobile, setIsMobile] = useState(false)
   const [showHoverCircle, setShowHoverCircle] = useState(false)
-
-  const handleMouseMove = (event, index) => {
-    //: Obtenir les coordonnées du centre de l'image actuelle
-    const rect = event.currentTarget.getBoundingClientRect()
-    const centerX = rect.left + rect.width / 2
-    const centerY = rect.top + rect.height / 2
-    //: Calculer la distance entre la souris et le centre de l'image
-    const distance = Math.sqrt(
-      Math.pow(centerX - event.clientX, 2) + Math.pow(centerY - event.clientY, 2)
-    )
-    //: Afficher le cercle de survol si la distance est <= 200px
-    if (distance <= 100) {
-      setShowHoverCircle(true)
-      setHoveredImageIndex(index)
-    } else {
-      setShowHoverCircle(false)
-      setHoveredImageIndex(null)
-    }
-  }
+  const [circleOpacity, setCircleOpacity] = useState(0)
 
   //:: Gestion "isMobile"
   useEffect(() => {
@@ -46,6 +28,31 @@ const MenuCarousel = ({ menus }) => {
       mediaQuery.removeEventListener("change", handleMediaChange)
     }
   }, [])
+
+  //:: Gestion du Hover Progressif
+  const handleMouseMove = (event, index) => {
+    //: Obtenir les coordonnées du centre de l'image actuelle
+    const rect = event.currentTarget.getBoundingClientRect()
+    const centerX = rect.left + rect.width / 2
+    const centerY = rect.top + rect.height / 2
+    //: Calculer la distance entre la souris et le centre de l'image
+    const distance = Math.sqrt(
+      Math.pow(centerX - event.clientX, 2) + Math.pow(centerY - event.clientY, 2)
+    )
+    //: Afficher le cercle de survol si la distance est <= 200px
+    const maxOpacityDistance = 200 //: Distance maximale en px pour l'opacité complète
+
+    if (distance <= maxOpacityDistance) {
+      setShowHoverCircle(true)
+      setHoveredImageIndex(index)
+      //: Calcul de l'opacité avec un maximum de 20%
+      const opacity = 0.2 * (1 - distance / maxOpacityDistance)
+      setCircleOpacity(opacity)
+    } else {
+      setShowHoverCircle(false)
+      setHoveredImageIndex(null)
+    }
+  }
 
   //:: Fonction Contrôle du glissement
   useEffect(() => {
@@ -163,8 +170,7 @@ const MenuCarousel = ({ menus }) => {
                   width: "100px",
                   height: "100px",
                   borderRadius: "50%",
-                  backgroundColor: "rgba(114, 96, 47, 0.166)",
-                  display: "flex",
+                  backgroundColor: `rgba(114, 96, 47, ${circleOpacity})`, // Utilisation de l'opacité calculée                  display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                 }}
