@@ -15,7 +15,8 @@ const Menus = () => {
 
   return (
     <>
-      <section className="flex flex-col md:flex-row md:pt-10">
+      <section id="MENU_INTRO" 
+      className="flex flex-col md:flex-row md:pt-10">
         <div className="md:min-w-40 flex  flex-col justify-center bg-opacity-50 p-8 text-white md:mx-auto md:w-2/3 md:px-20 lg:px-40">
           <h2 className="mb-4 pb-6 font-heading text-5xl font-bold xl:text-6xl ">
             régalez-vous !
@@ -47,16 +48,16 @@ const Menus = () => {
           </Parallax>
         </div>
       </section>
-      <section
-        id="MENU_DETAILS"
-        className="bg-secondary px-12 py-10 md:px-40 md:pb-28 md:pt-32"
+      <section id="MENU_DETAILS" 
+      className="bg-secondary px-12 py-10 md:px-40 md:pb-28 md:pt-32"
       >
         <div
           id="MENU_DETAILS"
           className="flex flex-col gap-10 pb-10 text-justify font-body text-secondary lg:flex-row lg:gap-20 lg:pb-20"
         >
-          <div className="prose md:prose-xl text-bold lg:w-1/2">
-            <p id="MENU_TEXT_1">
+          <div id="MENU_TEXT_1" 
+          className="prose md:prose-xl text-bold lg:w-1/2">
+            <p>
               L&apos;Aimal Lodge Bar se positionne comme le lieu incontournable pour
               savourer des cocktails et déguster des tapas, faisant de votre sortie une
               expérience mémorable. Plongez dans l&apos;atmosphère chaleureuse et
@@ -64,8 +65,9 @@ const Menus = () => {
               est notre priorité.
             </p>
           </div>
-          <div className=" md:prose-xl lg:w-1/2">
-            <p id="MENU_TEXT_2">
+          <div id="MENU_TEXT_2"
+          className=" md:prose-xl lg:w-1/2">
+            <p> 
               L&apos;Animal Lodge Bar incarne l&apos;essence d&apos;un bar
               d&apos;ambiance, où la qualité des boissons et des tapas se marie à une
               atmosphère décontractée, idéale pour partager des moments inoubliables entre
@@ -79,7 +81,8 @@ const Menus = () => {
           </h2>
         </div>
       </section>
-      <section id="MENU_MENUS" className="px-6 py-12 md:px-12 md:py-14">
+      <section id="MENU_MENUS" 
+      className="px-6 py-12 md:px-12 md:py-14">
         <MenuCarousel menus={menuImages} />
       </section>
     </>

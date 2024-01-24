@@ -7,5 +7,5 @@ export default {
   bracketSpacing: true,
   jsxBracketSameLine: false,
   arrowParens: "avoid",
-  printWidth: 90,
+  printWidth: 250,
 }

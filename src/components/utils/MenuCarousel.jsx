@@ -1,3 +1,5 @@
+//=components/utils/MenuCarousel.jsx
+
 import { useEffect, useState } from "react"
 import { FullScreen, useFullScreenHandle } from "react-full-screen"
 import Slider from "react-slick"
@@ -5,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css"
 import "slick-carousel/slick/slick.css"
 
 const MenuCarousel = ({ menus }) => {
+  //:: Initialisation des états et variables locales
   const handle = useFullScreenHandle()
   const [isFullScreen, setIsFullScreen] = useState(false)
   const [dragging, setDragging] = useState(false)
@@ -46,7 +49,7 @@ const MenuCarousel = ({ menus }) => {
       setShowHoverCircle(true)
       setHoveredImageIndex(index)
       //: Calcul de l'opacité avec un maximum de 20%
-      const opacity = 0.2 * (1 - distance / maxOpacityDistance)
+      const opacity = 0.3 * (1 - distance / maxOpacityDistance)
       setCircleOpacity(opacity)
     } else {
       setShowHoverCircle(false)
@@ -153,7 +156,7 @@ const MenuCarousel = ({ menus }) => {
           <div
             id="PAGE_CONTAINER"
             key={index}
-            className="relative focus:outline-none sm:p-4"
+            className="px-1 relative focus:outline-none sm:p-4 w-full"
             style={isFullScreen ? fullScreenStyles : {}}
             onMouseLeave={() => setHoveredImageIndex(null)}
             onMouseMove={event => !isMobile && handleMouseMove(event, index)}
