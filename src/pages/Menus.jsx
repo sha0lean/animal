@@ -48,15 +48,15 @@ const Menus = () => {
         </div>
       </section>
       <section
-        id="MenuDetails"
+        id="MENU_DETAILS"
         className="bg-secondary px-12 py-10 md:px-40 md:pb-28 md:pt-32"
       >
         <div
-          id="MenuTexts"
+          id="MENU_DETAILS"
           className="flex flex-col gap-10 pb-10 text-justify font-body text-secondary lg:flex-row lg:gap-20 lg:pb-20"
         >
           <div className="prose md:prose-xl text-bold lg:w-1/2">
-            <p id="MenuText1">
+            <p id="MENU_TEXT_1">
               L&apos;Aimal Lodge Bar se positionne comme le lieu incontournable pour
               savourer des cocktails et déguster des tapas, faisant de votre sortie une
               expérience mémorable. Plongez dans l&apos;atmosphère chaleureuse et
@@ -65,7 +65,7 @@ const Menus = () => {
             </p>
           </div>
           <div className=" md:prose-xl lg:w-1/2">
-            <p id="MenuText2">
+            <p id="MENU_TEXT_2">
               L&apos;Animal Lodge Bar incarne l&apos;essence d&apos;un bar
               d&apos;ambiance, où la qualité des boissons et des tapas se marie à une
               atmosphère décontractée, idéale pour partager des moments inoubliables entre
@@ -73,13 +73,13 @@ const Menus = () => {
             </p>
           </div>
         </div>
-        <div id="MenuTitle">
+        <div id="MENU_TITLE">
           <h2 className="text-center font-heading text-3xl text-neutral-600 group-hover:text-secondary md:text-5xl">
             découvrez notre carte
           </h2>
         </div>
       </section>
-      <section className="md:pb- px-12 py-10">
+      <section id="MENU_MENUS" className="px-6 py-12 md:px-12 md:py-14">
         <MenuCarousel menus={menuImages} />
       </section>
     </>
