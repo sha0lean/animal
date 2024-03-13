@@ -21,6 +21,7 @@ const About = () => {
           </p>
         </div>
       </section>
+      <section className="bg-secondary p-80 "></section>
     </>
   )
 }

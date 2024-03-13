@@ -10,6 +10,39 @@
     @apply bg-primary text-primary;
   }
 }
+@layer utilities {
+  body {
+  }
+
+  /* https://tailwindcss.com/docs/text-wrap#balance */
+
+  .has-body {
+    @apply text-sm;
+    @apply font-body;
+  }
+  .has-title {
+    @apply text-lg;
+    @apply font-heading;
+    /* media-queries etc */
+  }
+  .has-second-title {
+    @apply text-md;
+    @apply sm:text-md;
+    @apply font-heading;
+  }
+
+  .large-sec {
+    @apply w-full;
+    @apply p-8;
+    @apply sm:p-10;
+    @apply md:p-20;
+    @apply xl:p-24;
+  }
+  .limited-content {
+    @apply max-w-screen-lg;
+    @apply mx-auto;
+  }
+}
 
 .b1 {
   @apply border-2 border-double border-pink;
