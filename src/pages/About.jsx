@@ -14,6 +14,7 @@ import amb11 from "@assets/ambiance/ambiance11.webp"
 import amb12 from "@assets/ambiance/ambiance12.webp"
 import amb13 from "@assets/ambiance/ambiance13.webp"
 import imgLion from "@assets/artwork/standing_lion.webp"
+import DescrCTA from "@components/section/DescrCTA.jsx"
 
 const About = () => {
   return (
@@ -51,6 +52,7 @@ const About = () => {
           <img src={amb12} className="mt-2 aspect-auto w-full sm:mt-4" />
         </div>
       </section>
+      <DescrCTA />
       <section className="bg-secondary p-5 "></section>
     </>
   )
