@@ -1,5 +1,18 @@
 //=components/pages/About.jsx
 
+import amb01 from "@assets/ambiance/ambiance01.webp"
+import amb02 from "@assets/ambiance/ambiance02.webp"
+import amb03 from "@assets/ambiance/ambiance03.webp"
+import amb04 from "@assets/ambiance/ambiance04.webp"
+import amb05 from "@assets/ambiance/ambiance05.webp"
+import amb06 from "@assets/ambiance/ambiance06.webp"
+import amb07 from "@assets/ambiance/ambiance07.webp"
+import amb08 from "@assets/ambiance/ambiance08.webp"
+import amb09 from "@assets/ambiance/ambiance09.webp"
+import amb10 from "@assets/ambiance/ambiance10.webp"
+import amb11 from "@assets/ambiance/ambiance11.webp"
+import amb12 from "@assets/ambiance/ambiance12.webp"
+import amb13 from "@assets/ambiance/ambiance13.webp"
 import imgLion from "@assets/artwork/standing_lion.webp"
 
 const About = () => {
@@ -21,7 +34,24 @@ const About = () => {
           </p>
         </div>
       </section>
-      <section className="bg-secondary p-80 "></section>
+      <section id="ABOUT_MASONRY" className="bg-primary p-8 ">
+        <img src={amb10} className="mt-2 aspect-auto w-full sm:mt-4" />
+        <div className="mt-2 columns-2 gap-2 sm:mt-4 sm:gap-4 md:columns-3">
+          <img src={amb01} className="aspect-auto w-full" />
+          <img src={amb05} className="mt-2 aspect-auto w-full sm:mt-4" />
+          <img src={amb02} className="mt-2 aspect-auto w-full sm:mt-4" />
+          <img src={amb13} className="mt-2 aspect-auto w-full sm:mt-4" />
+          <img src={amb06} className="mt-2 aspect-auto w-full sm:mt-4" />
+          <img src={amb04} className="mt-2 aspect-auto w-full sm:mt-4" />
+          <img src={amb09} className="mt-2 aspect-auto w-full sm:mt-4" />
+          <img src={amb03} className="mt-2 aspect-auto w-full sm:mt-4" />
+          <img src={amb10} className="mt-2 aspect-square w-full sm:mt-4" />
+          <img src={amb08} className="mt-2 aspect-auto w-full sm:mt-4" />
+          <img src={amb11} className="mt-2 aspect-auto w-full sm:mt-4" />
+          <img src={amb12} className="mt-2 aspect-auto w-full sm:mt-4" />
+        </div>
+      </section>
+      <section className="bg-secondary p-5 "></section>
     </>
   )
 }
