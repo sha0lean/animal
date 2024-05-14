@@ -39,17 +39,17 @@ const About = () => {
         <img src={amb10} className="mt-2 aspect-auto w-full sm:mt-4" />
         <div className="mt-2 columns-2 gap-2 sm:mt-4 sm:gap-4 md:columns-3">
           <img src={amb01} className="aspect-auto w-full" />
-          <img src={amb05} className="mt-2 aspect-auto w-full sm:mt-4" />
-          <img src={amb02} className="mt-2 aspect-auto w-full sm:mt-4" />
-          <img src={amb13} className="mt-2 aspect-auto w-full sm:mt-4" />
           <img src={amb06} className="mt-2 aspect-auto w-full sm:mt-4" />
+          <img src={amb13} className="mt-2 aspect-auto w-full sm:mt-4" />
           <img src={amb04} className="mt-2 aspect-auto w-full sm:mt-4" />
+          <img src={amb02} className="mt-2 aspect-auto w-full sm:mt-4" />
           <img src={amb09} className="mt-2 aspect-auto w-full sm:mt-4" />
-          <img src={amb03} className="mt-2 aspect-auto w-full sm:mt-4" />
-          <img src={amb10} className="mt-2 aspect-square w-full sm:mt-4" />
+          <img src={amb12} className="mt-2 aspect-auto w-full sm:mt-4" />
+          <img src={amb05} className="mt-2 aspect-auto w-full sm:mt-4" />
           <img src={amb08} className="mt-2 aspect-auto w-full sm:mt-4" />
           <img src={amb11} className="mt-2 aspect-auto w-full sm:mt-4" />
-          <img src={amb12} className="mt-2 aspect-auto w-full sm:mt-4" />
+          <img src={amb10} className="mt-2 aspect-square w-full sm:mt-4" />
+          <img src={amb03} className="mt-2 aspect-auto w-full sm:mt-4" />
         </div>
       </section>
       <DescrCTA />
